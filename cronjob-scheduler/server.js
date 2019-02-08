@@ -27,7 +27,7 @@ const makePOSTApiRequest = async (url) => {
     }
 }
 
-new CronJob('0 */10 * * * *', async () => {
+new CronJob('0 0 */1 * * *', async () => {
     console.log('========================================================================================================================');
     console.log('Send User Energy Consumption Data', new Date().toLocaleString());
     console.log('========================================================================================================================');
