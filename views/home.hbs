@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="navbar"><h1>Sunsolar Energy Trading POC</h1></div>
+    <div class="grid">
+        <div class="content column">
+            <div class="info__box">
+                <h3>SEND USER DATA</h3>
+                <input id="address" placeholder="User's address"/>
+                <input id="energy_consumed" placeholder="User's consumed energy"/>
+                <input id="energy_produced" placeholder="User's produced energy"/>
+                <span class="loader" id="loading" style="display:none"></span>
+                <button onclick="postData()">SUBMIT</button>
+            </div>
+            <div class="info__box">
+                <div class="grid">
+                    <div class="column col-6">
+                        <h3>GET USER DATA</h3>
+                        <input id="userAddress" placeholder="User's address" />
+                        <span class="loader" id="getterLoading" style="display:none"></span>
+                        <button onclick="getData()">GET DATA</button>
+                        <div id="user-details" style="display:none">
+                            <h3>USER DETAILS</h3>
+                            <table border="1">
+                                <tr>
+                                    <td>ENERGY UNITS CONSUMED</td>
+                                    <td id="consumed-energy-unit"></td>
+                                </tr>
+                                <tr>
+                                    <td>ENERGY UNITS PRODUCED</td>
+                                    <td id="produced-energy-unit"></td>
+                                </tr>
+                                <tr>
+                                    <td>DEBT</td>
+                                    <td id="debt"></td>
+                                </tr>
+                                <tr>
+                                    <td>CONSUMPTION STATUS</td>
+                                    <td id="energy-consumption-status"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="column col-6">
+                        <div class="chart__frame" id="chartContainer" style="display:none"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="info__box">
+                <h3>GET POWER ADMIN DUE</h3>
+                <button onclick="getPowerAdminDue()">GET POWER ADMIN DUE</button>
+                <span class="loader" id="dueLoading" style="display:none"></span>
+                <div id="showPowerAdminDue" style="display: none">
+                    <h3>AMOUNT OF DUE LEFT TO PAY TO POWER ADMIN</h3>
+                    <span id="powerAdminDue"></span><span> XCEL</span>
+                </div>
+            </div>
+
+            <div class="info__box">
+                <h3>CONSUMER SETTLEMENT</h3>
+                <input id="settlementUserAddress" placeholder="User's Address to settle the over production">
+                <div class="loader" id="settleLoading" style="display:none"></div>
+                <button onclick="settleUserDebt()">SETTLE DEBT</button>
+            </div>
+            
+        </div>
+        <div class="column sidebar">
+            <div id="notification">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sunsolar POC</title>
+        <link rel="stylesheet" href="/energy-trading/css/all.css">
+        <style>
+            .loader {
+                border: 4px solid #f3f3f3; /* Light grey */
+                border-top: 4px solid #3498db; /* Blue */
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                animation: spin 2s linear infinite;
+                margin: 25px 0;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            {{{body}}}
+        </div>
+        <script async src="/energy-trading/js/homepage.js"></script>
+        <script src="/energy-trading/js/canvasjs.min.js"></script>
+    </body>
+</html>
